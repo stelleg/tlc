@@ -1,9 +1,12 @@
 
 all: test
 
-vsmul.ll vvmul.ll: tlc.hs
-	runhaskell tlc.hs
+test: test.c vsmul.ll vvmul.ll mvmul.ll transpose.ll t3v.ll
+	clang -O2 -o $@ $?
 
-test: test.c vsmul.ll vvmul.ll
-	clang -o test $?
+vsmul.ll vvmul.ll: Tensor.hs LLVM.hs 
+	runhaskell LLVM.hs
+
+clean: 
+	rm -f vsmul.ll vvmul.ll test
 
