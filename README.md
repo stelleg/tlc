@@ -17,3 +17,5 @@ examples = [
   Λ d i $ Λ d j $ Σ k $ b!i!j!k * c!k
   ]
 ```
+
+Sadly this was implemented in the good old days of typed pointers in LLVM, so you'll need to compile with against one of those.
