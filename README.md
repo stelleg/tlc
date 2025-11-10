@@ -18,4 +18,4 @@ examples = [
   ]
 ```
 
-Sadly this was implemented in the good old days of typed pointers in LLVM, so you'll need to compile with against one of those.
+Sadly this was implemented in the good old days of typed pointers in LLVM, so you'll need to compile against such an oldie.
